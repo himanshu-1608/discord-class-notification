@@ -4,23 +4,23 @@
 		"short_name": "ML Lab",
 		"start_time": "1",
 		"sections": ["IT_5"],
-		"faculty_name": ["Teacher Name N/A"],
-		"meet_link": ["Meet Link N/A"]
+		"faculty_names": ["Teacher Name N/A"],
+		"meet_links": ["Meet Link N/A"]
 	},
 	{
 		"type": "LECTURE",
 		"short_name": "HCI Lecture",
 		"start_time": "3",
 		"sections": ["IT_B"],
-		"faculty_name": ["Ruby"],
-		"meet_link": ["https://meet.google.com/cng-wyhn-yci"]
+		"faculty_names": ["Ruby"],
+		"meet_links": ["https://meet.google.com/cng-wyhn-yci"]
 	},
 	{
 		"type": "LECTURE",
 		"short_name": "ADSA Lecture",
 		"start_time": "4",
 		"sections": ["IT_B"],
-		"faculty_name": ["Mamtesh"],
-		"meet_link": ["https://meet.google.com/lookup/dmfsi3rxl6"]
+		"faculty_names": ["Mamtesh"],
+		"meet_links": ["https://meet.google.com/lookup/dmfsi3rxl6"]
 	}
 ]

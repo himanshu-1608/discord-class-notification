@@ -4,23 +4,23 @@
 		"short_name": "ML Lecture",
 		"start_time": "1",
 		"sections": ["IT_B"],
-		"faculty_name": ["Mukesh"],
-		"meet_link": ["https://meet.google.com/sjz-kqyu-xvb"]
+		"faculty_names": ["Mukesh"],
+		"meet_links": ["https://meet.google.com/sjz-kqyu-xvb"]
 	},
 	{
 		"type": "LECTURE",
 		"short_name": "PE Compiler Design Lecture",
 		"start_time": "3",
 		"sections": ["IT_B"],
-		"faculty_name": ["Ankit Jain"],
-		"meet_link": ["https://meet.google.com/yeb-rzuu-mdk"]
+		"faculty_names": ["Ankit Jain"],
+		"meet_links": ["https://meet.google.com/yeb-rzuu-mdk"]
 	},
 	{
 		"type": "LECTURE",
 		"short_name": "Open Elective Lecture",
 		"start_time": "4",
 		"sections": ["IT_B"],
-		"faculty_name": [
+		"faculty_names": [
 			"Metals & Alloys(Vikas Ghule)",
 			"Draught & Flood(Teacher Name N/A)",
 			"Energy Harvesting(Teacher Name N/A)",
@@ -29,7 +29,7 @@
 			"Cellular Mobile Comm.(Teacher Name N/A)",
 			"VHDL(Teacher Name N/A)"
 		],
-		"meet_link": [
+		"meet_links": [
 			"Meet Link N/A",
 			"Meet Link N/A",
 			"Meet Link N/A",
@@ -44,23 +44,23 @@
 		"short_name": "Business Mgmt. Lecture",
 		"start_time": "5",
 		"sections": ["IT_B"],
-		"faculty_name": ["Vikas Choudhary"],
-		"meet_link": ["https://meet.google.com/lookup/dsxub5tolp"]
+		"faculty_names": ["Vikas Choudhary"],
+		"meet_links": ["https://meet.google.com/lookup/dsxub5tolp"]
 	},
 	{
 		"type": "LECTURE",
 		"short_name": "Business Mgmt. Lecture",
-		"timeslots": "6",
+		"start_time": "6",
 		"sections": ["IT_B"],
-		"faculty_name": ["GeetaSachdeva/GeetKapilArora"],
-		"meet_link": ["https://meet.google.com/gnu-vfcd-dsn"]
+		"faculty_names": ["GeetaSachdeva/GeetKapilArora"],
+		"meet_links": ["https://meet.google.com/gnu-vfcd-dsn"]
 	},
 	{
 		"type": "LAB",
 		"short_name": "ADSA Lab",
-		"timeslots": "8",
+		"start_time": "8",
 		"sections": ["IT_4", "IT_6"],
-		"faculty_name": ["Mamtesh"],
-		"meet_link": ["Meet Link N/A"]
+		"faculty_names": ["Mamtesh"],
+		"meet_links": ["Meet Link N/A"]
 	}
 ]

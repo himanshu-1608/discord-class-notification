@@ -4,15 +4,15 @@
 		"short_name": "PE Compiler Design Lecture",
 		"start_time": "2",
 		"sections": ["IT_B"],
-		"faculty_name": ["Ankit Jain"],
-		"meet_link": ["https://meet.google.com/yeb-rzuu-mdk"]
+		"faculty_names": ["Ankit Jain"],
+		"meet_links": ["https://meet.google.com/yeb-rzuu-mdk"]
 	},
 	{
 		"type": "LECTURE",
 		"short_name": "Open Elective Lecture",
 		"start_time": "8",
 		"sections": ["IT_B"],
-		"faculty_name": [
+		"faculty_names": [
 			"Metals & Alloys(Vikas Ghule)",
 			"Draught & Flood(Teacher Name N/A)",
 			"Energy Harvesting(Teacher Name N/A)",
@@ -21,7 +21,7 @@
 			"Cellular Mobile Comm.(Teacher Name N/A)",
 			"VHDL(Teacher Name N/A)"
 		],
-		"meet_link": [
+		"meet_links": [
 			"Meet Link N/A",
 			"Meet Link N/A",
 			"Meet Link N/A",
