@@ -1,62 +1,66 @@
 [
 	{
-		"type": "lecture",
-		"subject": "Machine Learning",
-		"shortname": "ml",
-		"day": "Wednesday",
-		"timeslots": ["1"],
-		"sections": ["it-b", "it-4", "it-5", "it-6"],
-		"faculty_name": "Mukesh",
-		"meet_link": "https://meet.google.com/sjz-kqyu-xvb"
+		"type": "LECTURE",
+		"short_name": "ML Lecture",
+		"start_time": "1",
+		"sections": ["IT_B"],
+		"faculty_name": ["Mukesh"],
+		"meet_link": ["https://meet.google.com/sjz-kqyu-xvb"]
 	},
 	{
-		"type": "lecture",
-		"subject": "Compiler Design",
-		"shortname": "pe",
-		"day": "Wednesday",
-		"timeslots": ["3"],
-		"sections": ["it-b", "it-4", "it-5", "it-6"],
-		"faculty_name": "Ankit Jain",
-		"meet_link": "https://meet.google.com/yeb-rzuu-mdk"
+		"type": "LECTURE",
+		"short_name": "PE Compiler Design Lecture",
+		"start_time": "3",
+		"sections": ["IT_B"],
+		"faculty_name": ["Ankit Jain"],
+		"meet_link": ["https://meet.google.com/yeb-rzuu-mdk"]
 	},
 	{
-		"type": "lecture",
-		"subject": "Open Elective",
-		"shortname": "oe",
-		"day": "Wednesday",
-		"timeslots": ["4"],
-		"sections": ["it-b", "it-4", "it-5", "it-6"],
-		"faculty_name": "variable",
-		"meet_link": "variable"
+		"type": "LECTURE",
+		"short_name": "Open Elective Lecture",
+		"start_time": "4",
+		"sections": ["IT_B"],
+		"faculty_name": [
+			"Metals & Alloys(Vikas Ghule)",
+			"Draught & Flood(Teacher Name N/A)",
+			"Energy Harvesting(Teacher Name N/A)",
+			"Nanoscience & Tech(Teacher Name N/A)",
+			"Communication Engg.(Teacher Name N/A)",
+			"Cellular Mobile Comm.(Teacher Name N/A)",
+			"VHDL(Teacher Name N/A)"
+		],
+		"meet_link": [
+			"Meet Link N/A",
+			"Meet Link N/A",
+			"Meet Link N/A",
+			"Meet Link N/A",
+			"Meet Link N/A",
+			"Meet Link N/A",
+			"Meet Link N/A"
+		]
 	},
 	{
-		"type": "lecture",
-		"subject": "Business Management",
-		"shortname": "bm",
-		"day": "Wednesday",
-		"timeslots": ["5"],
-		"sections": ["it-b", "it-4", "it-5", "it-6"],
-		"faculty_name": "Vikas Choudhary",
-		"meet_link": "https://meet.google.com/lookup/dsxub5tolp"
+		"type": "LECTURE",
+		"short_name": "Business Mgmt. Lecture",
+		"start_time": "5",
+		"sections": ["IT_B"],
+		"faculty_name": ["Vikas Choudhary"],
+		"meet_link": ["https://meet.google.com/lookup/dsxub5tolp"]
 	},
 	{
-		"type": "lecture",
-		"subject": "Business Management",
-		"shortname": "bm",
-		"day": "Wednesday",
-		"timeslots": ["6"],
-		"sections": ["it-b", "it-4", "it-5", "it-6"],
-		"faculty_name": "GeetaSachdeva/GeetKapilArora",
-		"meet_link": "https://meet.google.com/gnu-vfcd-dsn"
+		"type": "LECTURE",
+		"short_name": "Business Mgmt. Lecture",
+		"timeslots": "6",
+		"sections": ["IT_B"],
+		"faculty_name": ["GeetaSachdeva/GeetKapilArora"],
+		"meet_link": ["https://meet.google.com/gnu-vfcd-dsn"]
 	},
 	{
-		"type": "lab",
-		"subject": "Advanced Data Structures and Algorithms",
-		"shortname": "adsa",
-		"day": "Wednesday",
-		"timeslots": ["8"],
-		"sections": ["it-4", "it-6"],
-		"faculty_name": "Mamtesh",
-		"meet_link": "Unknown"
+		"type": "LAB",
+		"short_name": "ADSA Lab",
+		"timeslots": "8",
+		"sections": ["IT_4", "IT_6"],
+		"faculty_name": ["Mamtesh"],
+		"meet_link": ["Meet Link N/A"]
 	}
 ]
