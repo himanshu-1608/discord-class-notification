@@ -14,7 +14,7 @@ EVENT_SLOTS = json.load(open(TIMESLOTS_LOCATION, "r"))
 TOP_LEVEL_SECTIONS = ["IT_A", "IT_B"]
 CURR_TIME = datetime.now()
 CURR_DAY = CURR_TIME.strftime("%A")  # current day
-CURR_DATE = CURR_TIME.strftime("%d-%m-%Y")
+CURR_DATE = CURR_TIME.strftime("%d-%m-%Y")  # current date
 CURR_HOUR = CURR_TIME.strftime("%H")  # current hour
 CURR_MIN = CURR_TIME.strftime("%M")  # current min
 
