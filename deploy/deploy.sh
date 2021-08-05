@@ -5,7 +5,7 @@ set -e
 # Lets write the public key of our aws instance
 eval $(ssh-agent -s)
 
-echo $PRIVATE_KEY > ~/.ssh/id_rsa
+echo $PRIVATE_KEY > /root/.ssh/id_rsa
 chmod 600 /root/.ssh/id_rsa
 
 # disable the host key checking.
