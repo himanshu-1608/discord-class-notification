@@ -66,6 +66,7 @@ def event_handler(event):
 
 
 def main():
+    print("Running index.py")
     for section in TOP_LEVEL_SECTIONS:
         # Don't process IT_A for now
         if section == "IT_A":
