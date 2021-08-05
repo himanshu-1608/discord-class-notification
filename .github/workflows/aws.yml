@@ -9,6 +9,4 @@ jobs:
   test-job:
     runs-on: ubuntu-18.04
     steps:
-      - run |
-        echo "Test Job"
-        python index.py
+      - run: echo "Job: test job"
