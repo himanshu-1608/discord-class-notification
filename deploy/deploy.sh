@@ -7,7 +7,7 @@ eval $(ssh-agent -s)
 
 echo $PRIVATE_KEY
 
-echo "$PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+echo $PRIVATE_KEY | tr -d '\r' | ssh-add - > /dev/null
 
 
 # ** Alternative approach
