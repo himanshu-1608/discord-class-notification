@@ -8,5 +8,5 @@ on:
 jobs:
   test-job:
     runs-on: ubuntu-18.04
-    script:
+    jobs:
       - bash deploy/deploy.sh
