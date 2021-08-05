@@ -9,6 +9,8 @@ jobs:
   test-job:
     runs-on: ubuntu-latest
     steps:
+      - name: Install open-ssh client
+        run: which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
       - name: Checkout
         uses: actions/checkout@v1
       - name: Run Deploy Script
