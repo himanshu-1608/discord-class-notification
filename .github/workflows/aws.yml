@@ -18,4 +18,4 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.PRIVATE_KEY }}
       - name: Run Deploy Script
-        run: bash ./deploy/deploy.sh
+        run: bash ./deploy/deploy.sh ${{ secrets.DEPLOY_SERVERS }}
