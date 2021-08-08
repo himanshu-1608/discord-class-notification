@@ -15,16 +15,13 @@ chmod +x ./deploy/disableHostKeyChecking.sh
 
 # we have already setup the DEPLOYER_SERVER in our gitlab settings which is a
 # comma seperated values of ip addresses.
-echo "print secrets:$1:end"
-DEPLOY_SERVERS=$secrets.DEPLOY_SERVERS
-echo "SECRETS-START:${secrets}:END"
+DEPLOY_SERVERS=$1
 # lets split this string and convert this into array
 # In UNIX, we can use this commond to do this
 # ${string//substring/replacement}
 # our substring is "," and we replace it with nothing.
 ALL_SERVERS=(${DEPLOY_SERVERS//,/ })
 echo "ALL_SERVERS START:${ALL_SERVERS}:END"
-exit
 # Lets iterate over this array and ssh into each EC2 instance
 # Once inside.
 # 1. Stop the server
