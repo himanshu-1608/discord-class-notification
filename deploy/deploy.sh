@@ -32,5 +32,5 @@ for server in "${ALL_SERVERS[@]}"
 do
   echo "deploying to ${server}"
   # ssh -i ./ssh_key.pem ubuntu@${server} 'bash -s' < ./deploy/updateAndRestart.sh
-  ssh -i himanshu-ssh-keypair.pem ubuntu@${server}
+  ssh -i "himanshu-ssh-keypair.pem" ubuntu@${server}
 done
