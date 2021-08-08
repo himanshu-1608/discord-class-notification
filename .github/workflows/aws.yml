@@ -17,7 +17,5 @@ jobs:
         uses: webfactory/ssh-agent@v0.5.3
         with:
           ssh-private-key: ${{ secrets.PRIVATE_KEY }}
-      - name: Test printing your secret (Remove this step in production)
-        run: cat $HOME/secrets/DEPLOY_SERVERS.json
       - name: Run Deploy Script
         run: bash ./deploy/deploy.sh
