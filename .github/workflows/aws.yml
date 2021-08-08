@@ -13,10 +13,6 @@ jobs:
         run: which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
       - name: Checkout
         uses: actions/checkout@v2
-      - name: sdgs
-        uses: webfactory/ssh-agent@v0.5.3
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Echo out GitHub Secrets
         run: |
           echo "PRIVATE KEY"
