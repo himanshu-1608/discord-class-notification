@@ -23,13 +23,14 @@ DEPLOY_SERVERS=$1
 ALL_SERVERS=(${DEPLOY_SERVERS//,/ })
 echo $2 > ./ssh_key.pem
 
-echo $(<ssh_key.pem)
-
 chmod 400 ./ssh_key.pem
+
+echo $(<ssh_key.pem)
+ls
 
 for server in "${ALL_SERVERS[@]}"
 do
   echo "deploying to ${server}"
   # ssh -i ./ssh_key.pem ubuntu@${server} 'bash -s' < ./deploy/updateAndRestart.sh
-  ssh -i ./ssh_key.pem ubuntu@${server}
+  ssh -i ssh_key.pem ubuntu@${server}
 done
