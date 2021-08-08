@@ -9,9 +9,9 @@ jobs:
   test-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Install open-ssh client
+      - name: Install open-ssh Client
         run: which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v2
       # - name: Echo out GitHub Secrets
       #   run: |
@@ -19,5 +19,9 @@ jobs:
       #     echo ${{secrets.SSH_PRIVATE_KEY}} | sed 's/./& /g'
       #     echo "DEPLOY_SERVERS"
       #     echo ${{secrets.DEPLOY_SERVERS}} | sed 's/./& /g'
+      - name: Copy pem file for sshing into servers
+        run: |
+          echo ${{ secrets.SSH_PRIVATE_KEY }} > himanshu-ssh-keypair.pem
+
       - name: Run Deploy Script
         run: bash ./deploy/deploy.sh ${{ secrets.DEPLOY_SERVERS }} ${{ secrets.SSH_PRIVATE_KEY }}
