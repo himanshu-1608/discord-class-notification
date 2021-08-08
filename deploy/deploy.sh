@@ -10,6 +10,7 @@ eval $(ssh-agent -s)
 # chmod 600 ~/.ssh/id_rsa
 
 # disable the host key checking.
+chmod +x ./deploy/disableHostKeyChecking.sh
 ./deploy/disableHostKeyChecking.sh
 
 # we have already setup the DEPLOYER_SERVER in our gitlab settings which is a
