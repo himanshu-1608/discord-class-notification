@@ -22,7 +22,7 @@ DEPLOY_SERVERS=$DEPLOY_SERVERS
 # ${string//substring/replacement}
 # our substring is "," and we replace it with nothing.
 ALL_SERVERS=(${DEPLOY_SERVERS//,/ })
-echo "ALL_SERVERS ${ALL_SERVERS}"
+echo "ALL_SERVERS START:${ALL_SERVERS}:END"
 
 # Lets iterate over this array and ssh into each EC2 instance
 # Once inside.
