@@ -27,8 +27,10 @@ echo "ALL_SERVERS START:${ALL_SERVERS}:END"
 # 1. Stop the server
 # 2. Take a pull
 # 3. Start the server
-echo $2 > ssh_key.pem
-chmod 400 ssh_key.pem
+echo $2 > ./ssh_key.pem
+
+chmod 400 ./ssh_key.pem
+
 for server in "${ALL_SERVERS[@]}"
 do
   echo "deploying to ${server}"
