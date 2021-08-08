@@ -21,7 +21,8 @@ DEPLOY_SERVERS=$1
 # ${string//substring/replacement}
 # our substring is "," and we replace it with nothing.
 ALL_SERVERS=(${DEPLOY_SERVERS//,/ })
-# echo $2 > himanshu-ssh-keypair.pem
+
+echo $2 > himanshu-ssh-keypair.pem
 
 chmod 400 himanshu-ssh-keypair.pem
 
