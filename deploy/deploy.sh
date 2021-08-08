@@ -23,14 +23,14 @@ DEPLOY_SERVERS=$1
 ALL_SERVERS=(${DEPLOY_SERVERS//,/ })
 # echo $2 > himanshu-ssh-keypair.pem
 
-chmod 400 himanshu-ssh-keypair.pem
+# chmod 400 himanshu-ssh-keypair.pem
 
-echo $(<himanshu-ssh-keypair.pem)
+# echo $(<himanshu-ssh-keypair.pem)
 ls
 
 for server in "${ALL_SERVERS[@]}"
 do
-  echo "deploying to ${server}"
+  echo "deploying to ${server}" # | sed 's/./& /g'
   # ssh -i ./ssh_key.pem ubuntu@${server} 'bash -s' < ./deploy/updateAndRestart.sh
   ssh -i "himanshu-ssh-keypair.pem" ubuntu@${server}
 done
