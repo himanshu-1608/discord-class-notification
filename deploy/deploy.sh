@@ -23,7 +23,7 @@ DEPLOY_SERVERS=$1
 ALL_SERVERS=(${DEPLOY_SERVERS//,/ })
 echo $2 > ./ssh_key.pem
 
-cat ./ssh_key.pem
+echo $(<ssh_key.pem)
 
 chmod 400 ./ssh_key.pem
 
