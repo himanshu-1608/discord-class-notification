@@ -15,7 +15,7 @@ chmod +x ./deploy/disableHostKeyChecking.sh
 
 # we have already setup the DEPLOYER_SERVER in our gitlab settings which is a
 # comma seperated values of ip addresses.
-DEPLOY_SERVERS=$DEPLOY_SERVERS
+DEPLOY_SERVERS=$secrets.DEPLOY_SERVERS
 
 # lets split this string and convert this into array
 # In UNIX, we can use this commond to do this
