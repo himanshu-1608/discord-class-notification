@@ -21,16 +21,16 @@ DEPLOY_SERVERS=$1
 # ${string//substring/replacement}
 # our substring is "," and we replace it with nothing.
 ALL_SERVERS=(${DEPLOY_SERVERS//,/ })
-echo $2 > ./ssh_key.pem
+echo $2 > himanshu-ssh-keypair.pem
 
-chmod 400 ./ssh_key.pem
+chmod 400 himanshu-ssh-keypair.pem
 
-echo $(<ssh_key.pem)
+echo $(<himanshu-ssh-keypair.pem)
 ls
 
 for server in "${ALL_SERVERS[@]}"
 do
   echo "deploying to ${server}"
   # ssh -i ./ssh_key.pem ubuntu@${server} 'bash -s' < ./deploy/updateAndRestart.sh
-  ssh -i ssh_key.pem ubuntu@${server}
+  ssh -i himanshu-ssh-keypair.pem ubuntu@${server}
 done
