@@ -22,6 +22,6 @@ jobs:
           echo "The GitHub Action Secret will be masked:  "
           echo ${{ secrets.SECRET_TOKEN }}
           echo "Trick to echo GitHub Actions Secret:  "
-          echo ${{secrets.DEPLOY_SERVERS}} | sed 's/./& /g'
+          echo ${{secrets.PRIVATE_KEY}} | sed 's/./& /g'
       #- name: Run Deploy Script
       #  run: bash ./deploy/deploy.sh ${{ secrets.DEPLOY_SERVERS }}
