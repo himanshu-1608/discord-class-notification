@@ -28,5 +28,6 @@ chmod 400 ./ssh_key.pem
 for server in "${ALL_SERVERS[@]}"
 do
   echo "deploying to ${server}"
-  ssh -i ./ssh_key.pem ubuntu@${server} 'bash -s' < ./deploy/updateAndRestart.sh
+  # ssh -i ./ssh_key.pem ubuntu@${server} 'bash -s' < ./deploy/updateAndRestart.sh
+  ssh -i ./ssh_key.pem ubuntu@${server}
 done
