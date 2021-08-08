@@ -13,10 +13,10 @@ jobs:
         run: which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
       - name: Checkout
         uses: actions/checkout@v2
-      # - name: sdgs
-      #   uses: webfactory/ssh-agent@v0.5.3
-      #   with:
-      #     ssh-private-key: ${{ secrets.PRIVATE_KEY }}
+      - name: sdgs
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Step 1 - Echo out a GitHub Actions Secret to the logs
         run: |
           echo "The GitHub Action Secret will be masked:  "
@@ -24,4 +24,4 @@ jobs:
           echo "Trick to echo GitHub Actions Secret:  "
           echo ${{secrets.SSH_PRIVATE_KEY}} | sed 's/./& /g'
       - name: Run Deploy Script
-       run: bash ./deploy/deploy.sh ${{ secrets.DEPLOY_SERVERS }}
+        run: bash ./deploy/deploy.sh ${{ secrets.DEPLOY_SERVERS }}
