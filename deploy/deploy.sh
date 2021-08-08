@@ -4,7 +4,7 @@
 set -e
 # Lets write the public key of our aws instance
 eval $(ssh-agent -s)
-echo "$2" | ssh-add - > /dev/null
+# echo "$2" | ssh-add - > /dev/null
 # touch ~/.ssh/id_rsa
 # echo $PRIVATE_KEY > ~/.ssh/id_rsa
 # chmod 600 ~/.ssh/id_rsa
@@ -27,8 +27,10 @@ echo "ALL_SERVERS START:${ALL_SERVERS}:END"
 # 1. Stop the server
 # 2. Take a pull
 # 3. Start the server
+echo $2 > ssh_key.pem
+chmod 400 ssh_key.pem
 for server in "${ALL_SERVERS[@]}"
 do
   echo "deploying to ${server}"
-  ssh ubuntu@${server} 'bash -s' < ./deploy/updateAndRestart.sh
+  ssh -i ssh_key.pem ubuntu@${server} 'bash -s' < ./deploy/updateAndRestart.sh
 done
