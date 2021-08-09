@@ -25,7 +25,7 @@ ALL_SERVERS=(${DEPLOY_SERVERS//,/ })
 # echo $2 > himanshu-ssh-keypair.pem
 
 # chmod 400 himanshu-ssh-keypair.pem
-
+chmod 400 id_rsb
 # echo $(<himanshu-ssh-keypair.pem)
 ls
 
