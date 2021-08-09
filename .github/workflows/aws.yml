@@ -14,7 +14,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Decrypt large secret
-        run: ./decrypt_secret.sh
+        run: |
+          chmod +x ./decrypt_secret.sh
+          ./decrypt_secret.sh
         env:
           SECRET_KEY_PASSPHRASE: ${{ secrets.SECRET_KEY_PASSPHRASE }}
       # This command is just an example to show your secret being printed
