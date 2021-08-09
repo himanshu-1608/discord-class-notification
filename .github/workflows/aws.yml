@@ -13,6 +13,15 @@ jobs:
         run: which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
       - name: Checkout repository
         uses: actions/checkout@v2
+      - name: Decrypt large secret
+        run: ./decrypt_secret.sh
+        env:
+          SECRET_KEY_PASSPHRASE: ${{ secrets.SECRET_KEY_PASSPHRASE }}
+      # This command is just an example to show your secret being printed
+      # Ensure you remove any print statements of your secrets. GitHub does
+      # not hide secrets that use this workaround.
+      - name: Test printing your secret (Remove this step in production)
+        run: cat $HOME/secrets/ex.pem
       # - name: Echo out GitHub Secrets
       #   run: |
       #     echo "PRIVATE KEY"
@@ -20,8 +29,10 @@ jobs:
       #     echo "DEPLOY_SERVERS"
       #     echo ${{secrets.DEPLOY_SERVERS}} | sed 's/./& /g'
       # - name: Copy pem file for sshing into servers
+      #   with:
+      #     PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
       #   run: |
       #     echo ${{ secrets.SSH_PRIVATE_KEY }} > himanshu-ssh-keypair.pem
 
-      - name: Run Deploy Script
-        run: bash ./deploy/deploy.sh ${{ secrets.DEPLOY_SERVERS }} ${{ secrets.SSH_PRIVATE_KEY }}
+      # - name: Run Deploy Script
+      #   run: bash ./deploy/deploy.sh ${{ secrets.DEPLOY_SERVERS }} ${{ secrets.SSH_PRIVATE_KEY }}
