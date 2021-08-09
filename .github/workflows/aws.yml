@@ -19,9 +19,9 @@ jobs:
       #     echo ${{secrets.SSH_PRIVATE_KEY}} | sed 's/./& /g'
       #     echo "DEPLOY_SERVERS"
       #     echo ${{secrets.DEPLOY_SERVERS}} | sed 's/./& /g'
-      - name: Copy pem file for sshing into servers
-        run: |
-          echo ${{ secrets.SSH_PRIVATE_KEY }} > himanshu-ssh-keypair.pem
+      # - name: Copy pem file for sshing into servers
+      #   run: |
+      #     echo ${{ secrets.SSH_PRIVATE_KEY }} > himanshu-ssh-keypair.pem
 
       - name: Run Deploy Script
         run: bash ./deploy/deploy.sh ${{ secrets.DEPLOY_SERVERS }} ${{ secrets.SSH_PRIVATE_KEY }}
