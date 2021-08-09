@@ -10,6 +10,8 @@ DEPLOY_SERVERS=$DEPLOY_SERVERS
 # our substring is "," and we replace it with nothing.
 ALL_SERVERS=(${DEPLOY_SERVERS//,/ })
 
+PEM_FILE_PATH = $HOME/secrets/ex.pem
+
 chmod 400 $PEM_FILE_PATH
 
 for server in "${ALL_SERVERS[@]}"

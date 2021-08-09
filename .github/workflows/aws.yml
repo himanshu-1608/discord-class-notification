@@ -22,7 +22,4 @@ jobs:
       - name: Run Deploy Script
         env:
           DEPLOY_SERVERS: ${{ secrets.DEPLOY_SERVERS }}
-          PEM_FILE_PATH: $HOME/secrets/ex.pem
-        run: |
-          echo $PEM_FILE_PATH
-          bash ./deploy/deploy.sh
+        run: bash ./deploy/deploy.sh
